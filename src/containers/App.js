@@ -5,7 +5,7 @@ import classes from './App.css';
 
 class App extends Component {
 
-  constructor(props){
+  constructor(props) {
     super(props);
     console.log('[App.js] Inside Constructor', props);
     this.state = {
@@ -19,29 +19,20 @@ class App extends Component {
     }
   }
 
-  componentWillMount(){
+  componentWillMount() {
     console.log('[App.js] Inside componentWillMount');
   }
-  componentDidMount(){
+  componentDidMount() {
     console.log('[App] Inside componentDidMount');
   }
 
-  shouldComponentUpdate(nextProps, nextState){
+  shouldComponentUpdate(nextProps, nextState) {
     console.log('[UPDATE App.js] Inside shouldComponentUpdate', nextProps, nextState);
-    return true;
+    return true ;
   }
-  componentDidUpdate(nextProps, nextState){
+  componentDidUpdate() {
     console.log('[UPDATE App.js] Inside componentDidUpdate');
   }
-  // state = {
-  //   persons: [
-  //     { id: '1', name: 'Max', age: 28 },
-  //     { id: '2', name: 'Manu', age: 29 },
-  //     { id: '3', name: 'Stephane', age: 26 }
-  //   ],
-  //   ortherState: 'Some Orther value',
-  //   showPersons: false
-  // }
 
   nameChangeHandler = (event, id) => {
     const personIndex = this.state.persons.findIndex(p => {
@@ -83,16 +74,16 @@ class App extends Component {
 
         </div>
       );
-    }   
+    }
     return (
-      < div className={classes.App}>   
+      < div className={classes.App}>
         <Cockplit
-          appTitle = {this.props.title}
-          persons= {this.state.persons}
-          showPersons = {this.state.showPersons}
-          btnOnClick = {this.togglePersonHandler}
-        /> 
-        { persons }
+          appTitle={this.props.title}
+          persons={this.state.persons}
+          showPersons={this.state.showPersons}
+          btnOnClick={this.togglePersonHandler}
+        />
+        {persons}
       </div >
     );
   }

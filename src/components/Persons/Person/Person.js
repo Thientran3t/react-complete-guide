@@ -1,19 +1,19 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import classes from './Person.css';
 
 class Person extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         console.log('[Person.js] Inside Constructor', props);
-      }
-    
-      componentWillMount(){
+    }
+
+    componentWillMount() {
         console.log('[Person.js] Inside componentWillMount');
-      }
-      componentDidMount(){
-        console.log('[Person] Inside componentDidMount');
-      }
-    render(){
+    }
+    componentDidMount() {
+        console.log('[Person.js] Inside componentDidMount');
+    }
+    render() {
         console.log('[Person.js] Inside render')
         return (
             <div className={classes.Person}>
@@ -22,7 +22,7 @@ class Person extends Component {
                 <input type="text" onChange={this.props.changed} value={this.props.name}></input>
             </div>
         )
-    }   
+    }
 }
 
 export default Person;
